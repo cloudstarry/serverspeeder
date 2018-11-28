@@ -12,9 +12,11 @@ CentOS7:
 
 (rpm -ivh http://soft.91yun.org/ISO/Linux/CentOS/kernel/kernel-3.10.0-229.1.2.el7.x86_64.rpm –force –nodeps)
 
-grub2-editenv list
+cat /boot/grub2/grub.cfg | grep menuentry
 
 grub2-set-default "CentOS Linux (3.10.0-229.1.2.el7.x86_64) 7 (Core)"
+
+grub2-editenv list
 
 * reboot
 
